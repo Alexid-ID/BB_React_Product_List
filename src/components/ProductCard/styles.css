@@ -1,0 +1,28 @@
+.product-card {
+  width: 200px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.product-image {
+  width: 100%;
+  margin-bottom: 12px;
+  border-radius: 12px 12px 0 0;
+}
+
+.product-info {
+  padding: 12px;
+}
+
+.product-info h2 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.product-info p {
+  margin: 5px 0 0;
+  font-weight: bold;
+  color: #333;
+}

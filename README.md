@@ -1,46 +1,65 @@
-# Getting Started with Create React App
+# (React + TypeScript) Product List
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Infinite Scrolling and Searchable Product List
+This project implements an infinite scrolling product list using React with `TypeScript`. It allows users to browse products fetched from the [DummyJSON Products API](https://dummyjson.com/docs/products), with a search functionality to find products by name.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Features
+- Infinite Scrolling: Automatically loads more products as the user scrolls to the bottom of the page.
+- Search: Search for products by product name.
 
-### `npm start`
+### How to Run
+Make sure you have the following installed on your system:
+- Node.js (v16 or higher)
+- npm or yarn
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Setup Instructions
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Clone this repository:
+   ```bash
+    git clone $REPOSITORY_URL
+    ```
 
-### `npm test`
+2. Install Dependencies:
+   Run the following command to install the necessary packages:
+   ```bash
+   npm install
+   ```
+   Or, if you're using Yarn:
+   ```bash
+   yarn install
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Start the Development Server:
+   Start the local development server with:
+   ```bash
+   npm start
+   ```
+   Or, if using Yarn:
+   ```bash
+   yarn start
+   ```
 
-### `npm run build`
+   The application will be available at `http://localhost:3000`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## API Information
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This project uses the [DummyJSON Products API](https://dummyjson.com/docs/products):
+- Base URL: `https://dummyjson.com/products`
+- Endpoints:
+  - `/products?limit=20&skip=<offset>`: Fetch paginated products.
+  - `/products/search?q=<query>`: Search for products by name.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `npm run eject`
+### Infinite Scrolling
+1. Scroll down the page to load more products.
+2. The list will fetch the next 20 products as you scroll to the bottom.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Search Functionality
+1. Enter the product name in the search bar.
+2. The list will update to show products that match the keyword.
+3. If no products match the search query, a message `No products found` will be displayed.
+4. If there are no more products to load, a message `No more products to show` will be displayed.
+5. Click `X` icon to clear the search query and show all products.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
